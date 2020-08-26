@@ -1,0 +1,20 @@
+using System;
+
+namespace Hello_World
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name;
+            int age;
+            Console.WriteLine("Hello, What's your name?");
+            Console.Write("Type your name: ");
+            name = Console.ReadLine();
+            Console.Write("Type your age: ");
+            age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Hi " + name + ", you are " + age + " years old. Cool");
+            Console.ReadKey();
+        }
+    }
+}
