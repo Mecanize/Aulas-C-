@@ -1,0 +1,75 @@
+using System;
+
+namespace Aula_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Aula 2
+
+            /* int => números inteiros
+             * float => números decimais
+             * double => números decimais com mais precisão
+             * char => letras individuais
+             * string => um conjunto de várias letras
+             * bool => verdadeiro ou falso
+             */
+
+            /* + => sumar
+             * - => subtrair
+             * * => multiplicar
+             * / => divisão
+             * % => modulo
+             */
+         
+            /* if
+             * else if
+             * else
+             */
+
+            /* <= -> menor ou igual 
+             * >= -> maior ou igual
+             * == -> igual
+             * != -> não é igual
+             */
+
+            double primeiroNumero;
+            double segundoNumero;
+            double resultado = 0;
+            string operacao;
+            
+            // Receber informação do utilizador
+            Console.Write("Primeiro número: ");
+            primeiroNumero = double.Parse(Console.ReadLine());
+            Console.Write("Tipo de operação: ");
+            operacao = Console.ReadLine();
+            Console.Write("Segundo número: ");
+            segundoNumero = double.Parse(Console.ReadLine());
+
+            // Verifcar tipo de operação e returnar valor
+            if (operacao == "+")
+                resultado = primeiroNumero + segundoNumero;
+            else if (operacao == "-")
+                resultado = primeiroNumero - segundoNumero;
+            else if (operacao == "*")
+                resultado = primeiroNumero * segundoNumero;
+            else if (operacao == "/")
+            {
+                if(segundoNumero == 0)
+                {
+                    Console.WriteLine("Não é possivél dividir por zero");
+                    Console.Write("Segundo número: ");
+                    segundoNumero = double.Parse(Console.ReadLine());
+                }
+                resultado = primeiroNumero / segundoNumero;
+            }
+            else
+                Console.WriteLine("Operação inválida.");
+
+            // Mostrar resultado
+            Console.WriteLine("O resultado é " + resultado);
+            Console.ReadKey();
+        }
+    }
+}
