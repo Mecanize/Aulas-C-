@@ -1,0 +1,39 @@
+using System;
+
+namespace Concurso
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string choice;
+            string message;
+
+            Console.WriteLine("Bem vindo!");
+            Console.WriteLine("Por favor escolha uma porta de 1 a 3.");
+            Console.Write("Porta: ");
+            choice = Console.ReadLine();
+
+            if (choice == "1")
+            {
+                message = "Ganhas-te um carro";
+                Console.WriteLine(message);
+            }
+            else if (choice == "2")
+            {
+                message = "Ganhas-te umas férias nas Maldivas.";
+                Console.WriteLine(message);
+            }
+            else if (choice == "3")
+            {
+                message = "Ganhas-te um barco.";
+                Console.WriteLine(message);
+            }
+            else
+                Console.WriteLine("Ganhas-te um soco na cara!! Pow!!");
+
+            Console.ReadKey();
+
+        }
+    }
+}
